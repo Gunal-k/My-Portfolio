@@ -164,6 +164,7 @@ body{
     left: 97%;
     border-radius: 50px;
     border: none;
+    cursor: pointer;
     transform: translateX(-50%);
     width: 50px;
     height: 50px;
