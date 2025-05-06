@@ -53,6 +53,64 @@ body {
 	margin: 0;
 }
 
+.typed-wrapper {
+	display: inline-flex;
+	align-items: center;
+	line-height: 1;
+	height:40px;
+}
+
+#typed-text {
+	color: #fff;
+	font-weight: 600;
+	font-size: 28px;
+	margin: 20px 0;
+	line-height: 1;
+	display: inline;
+}
+
+.typed-cursor {
+	font-size: inherit;
+	line-height: 1;
+	vertical-align: middle;
+	margin-left: 2px;
+}
+
+.social-links {
+	margin-top: 65px;
+	display: flex;
+	align-items: center;
+	gap: 30px;
+}
+
+.social-links a[title="LinkedIn"] i {
+	font-size: 54px;
+	color: #0077b5;
+}
+
+.social-links a[title="GitHub"] i {
+	font-size: 54px;
+	color: #181717;
+}
+
+.social-links a[title="HackerRank"] img {
+	width: 54px;
+	height: 54px;
+	margin-top: 10px;
+}
+
+.social-links a[title="LeetCode"] {
+	display: flex;
+	align-items: center;
+	height: 100px;
+}
+
+.social-links a[title="LeetCode"] img {
+	width: 52px;
+	height: 52px;
+	margin-top: -3px;
+}
+
 .hire-btn {
 	background: #ffb742;
 	padding: 6px 30px;
@@ -487,6 +545,27 @@ footer .cols .news-col form button i {
 		gap: 10px;
 	}
 
+	.social-links {
+		justify-content: center;
+		gap: 25px;
+	}
+
+	.social-links a[title="LinkedIn"] i,
+	.social-links a[title="GitHub"] i {
+		font-size: 48px;
+	}
+
+	.social-links a[title="HackerRank"] img,
+	.social-links a[title="LeetCode"] img {
+		width: 48px;
+		height: 48px;
+	}
+
+	.skills .right {
+		width: 80%;
+		justify-content: space-evenly;
+	}
+
 	.guarantee .item {
 		flex-basis: 49%;
 	}
@@ -536,6 +615,12 @@ footer .cols .news-col form button i {
 }
 
 @media screen and (max-width: 780px) {
+	.social-links {
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+
 	.navbar button {
 		display: none;
 	}
@@ -573,6 +658,32 @@ footer .cols .news-col form button i {
 
 	.navbar ul li a {
 		font-size: 14px;
+	}
+
+	.social-links {
+		margin-top: 40px;
+		gap: 16px;
+	}
+
+	.social-links a[title="LinkedIn"] i,
+	.social-links a[title="GitHub"] i {
+		font-size: 40px;
+	}
+
+	.social-links a[title="HackerRank"] img,
+	.social-links a[title="LeetCode"] img {
+		width: 42px;
+		height: 42px;
+	}
+
+	.social-links a[title="LeetCode"] {
+		height: auto;
+	}
+
+	.skills .right {
+		width: 100%;
+		justify-content: center;
+		gap: 10px;
 	}
 
 	.main {
@@ -637,11 +748,93 @@ footer .cols .news-col form button i {
 
 @media screen and (max-width: 480px) {
 	.main p.title {
-		font-size: 18px;
+		font-size: 14px;
+		text-align: center;
 	}
 
 	.main p.subtitle {
-		font-size: 10px;
+		text-align: center;
+		margin: 5px 5px 0 5px;
+		font-size: 11px;
+	}
+
+	.social-links {
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.social-links a[title="LinkedIn"] i,
+	.social-links a[title="GitHub"] i {
+		font-size: 26px;
+	}
+
+	.social-links a[title="HackerRank"] img,
+	.social-links a[title="LeetCode"] img {
+		width: 36px;
+		height: 36px;
+	}
+
+	.div-style {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.seprator {
+		margin: 20px 0;
+	}
+
+	.about,
+	.skills {
+		margin: 0;
+		padding: 0 20px;
+	}
+
+	.hire-btn {
+		display: none;
+	}
+
+	.about img {
+		width: 200px;
+		height: 200px;
+		margin-bottom: -25px;
+	}
+
+	.skills .left .info h3 {
+		margin-top: 40px;
+	}
+
+	.skills .left .info p {
+		font-size: 14px;
+	}
+
+	.skills > .right {
+		display: flex;
+		justify-content: center;
+		gap: 15px;
+		margin: 20px 0;
+		height: auto;
+		margin-bottom: 60px;
+	}
+
+	.skills > .right > .item {
+		width: 40px;
+		height: 40px;
+	}
+
+	.skills > .right > .item i {
+		font-size: 30px;
+	}
+
+	.info h3 {
+		text-align: center;
+	}
+
+	.info p {
+		text-align: center;
+		padding: 0px;
+		margin: 0;
 	}
 
 	.guarantee .item .info h3 {
@@ -650,5 +843,67 @@ footer .cols .news-col form button i {
 
 	.guarantee .item .info p {
 		font-size: 12px;
+	}
+
+	.projects {
+		padding: 0 20px;
+	}
+
+	.projects .project h4 {
+		margin-top: 20px;
+		font-size: 18px;
+	}
+
+	.projects .project p {
+		font-size: 13px;
+	}
+
+	.main p.subtitle {
+		padding: 0 10px;
+		font-size: 14px;
+	}
+
+	#typed-text{
+		font-size: 18px;
+	}
+
+	footer {
+		padding: 40px 20px;
+	}
+
+	footer > .start {
+		height: 70px;
+	}
+
+	footer > .cols .about-col {
+		text-align: center;
+	}
+
+	footer > .cols .links-col {
+		margin-left: -180px;
+		text-align: center;
+	}
+
+	footer > .cols .links-col h3 {
+		display: inline-flex;
+	}
+
+	footer > .cols .col2 {
+		position: absolute;
+		bottom: 238px;
+		right: 40px;
+	}
+
+	footer > .cols .news-col {
+		font-size: 12px;
+		margin-top: 20px;
+		text-align: center;
+	}
+
+	.scroll {
+		font-size: 16px;
+		width: 36px;
+		height: 36px;
+		left: 93%;
 	}
 }

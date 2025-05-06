@@ -17,6 +17,7 @@
 		<link rel="stylesheet" href="style.css" />
 		<link rel="icon" href="my.jpeg" type="image/x-icon" />
 		<title>Portfolio | Gunal K</title>
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 	</head>
 
 	<body>
@@ -38,41 +39,29 @@
 
 		<div class="main">
 			<h4>Hi, I Am <span>Gunal K</span> 👋</h4>
-			<p class="title">Aspiring FullStack Developer & Data Analyst</p>
+			<div class="typed-wrapper">
+				<span id="typed-text"></span>
+			  </div>			  
 			<p class="subtitle">
 				Final-year BCA student passionate about building practical,
 				user-focused web and data solutions.
 			</p>
 
 			<!-- Social Links -->
-			<div
-				class="social-links"
-				style="
-					margin-top: 65px;
-					display: flex;
-					align-items: center;
-					gap: 30px;
-				"
-			>
+			<div class="social-links">
 				<a
 					href="https://www.linkedin.com/in/gunal-k-9435b02a7/"
 					target="_blank"
 					title="LinkedIn"
 				>
-					<i
-						class="fab fa-linkedin"
-						style="font-size: 54px; color: #0077b5"
-					></i>
+					<i class="fab fa-linkedin"></i>
 				</a>
 				<a
 					href="https://github.com/Gunal-k"
 					target="_blank"
 					title="GitHub"
 				>
-					<i
-						class="fab fa-github"
-						style="font-size: 54px; color: #181717"
-					></i>
+					<i class="fab fa-github"></i>
 				</a>
 				<a
 					href="https://www.hackerrank.com/profile/gunalk_0007"
@@ -82,26 +71,24 @@
 					<img
 						src="https://hrcdn.net/fcore/assets/favicon-ddc852f75a.png"
 						alt="LeetCode"
-						style="width: 54px; height: 54px; margin-top: 10px"
 					/>
 				</a>
 				<a
 					href="https://leetcode.com/u/Gunalk/"
 					target="_blank"
 					title="LeetCode"
-					style="display: flex; align-items: center; height: 100px"
 				>
 					<img
 						src="https://leetcode.com/favicon.ico"
 						alt="LeetCode"
-						style="width: 52px; height: 52px; margin-top: -3px"
 					/>
 				</a>
 			</div>
 		</div>
 
-		<div id="about"></div>
-		<h5 class="seprator">Who I Am</h5>
+		<div id="about" class="div-style">
+			<h5 class="seprator">Who I Am</h5>
+		</div>
 
 		<div class="about">
 			<img src="my.jpeg" alt="Gunal K" />
@@ -125,8 +112,9 @@
 			</div>
 		</div>
 
-		<div id="skills"></div>
-		<h5 class="seprator">My Skills</h5>
+		<div id="skills" class="div-style">
+			<h5 class="seprator">My Skills</h5>
+		</div>
 
 		<div class="skills">
 			<div class="left">
@@ -170,11 +158,7 @@
 				<div class="item" data-tooltip="GitHub" title="GitHub">
 					<i class="fab fa-github" style="color: #181717"></i>
 				</div>
-				<div
-					class="item"
-					data-tooltip="SQL / Database"
-					title="SQL / Database"
-				>
+				<div class="item" data-tooltip="SQL" title="SQL">
 					<i class="fas fa-database" style="color: #4db33d"></i>
 				</div>
 				<div class="item" data-tooltip="Power BI" title="Power BI">
@@ -218,8 +202,9 @@
 			</div>
 		</div>
 
-		<div id="projects"></div>
-		<h5 class="seprator">My Projects</h5>
+		<div id="projects" class="div-style">
+			<h5 class="seprator">My Projects</h5>
+		</div>
 
 		<div class="projects">
 			<div class="project">
@@ -268,7 +253,7 @@
 					<p>Aspiring FullStack Developer & Data Analyst</p>
 				</div>
 
-				<div class="links-col">
+				<div class="links-col col1">
 					<h4>Useful Links</h4>
 					<a href="#">Home</a>
 					<a href="#">About</a>
@@ -276,7 +261,7 @@
 					<a href="#">Projects</a>
 				</div>
 
-				<div class="links-col">
+				<div class="links-col col2">
 					<h4>Social Media</h4>
 					<a href="https://www.linkedin.com/in/gunal-k-9435b02a7/"
 						>LinkedIn</a
@@ -312,8 +297,34 @@
 			id="scrollToTop"
 			aria-label="Scroll to top"
 			onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
+			style="display: none"
 		>
 			<i class="fas fa-arrow-up"></i>
 		</button>
+		<script>
+			window.addEventListener("scroll", () => {
+				const scrollToTopButton =
+					document.getElementById("scrollToTop");
+				if (window.scrollY === 0) {
+					scrollToTopButton.style.display = "none";
+				} else {
+					scrollToTopButton.style.display = "block";
+				}
+			});
+
+			new Typed("#typed-text", {
+				strings: [
+					"Aspiring FullStack Developer",
+					"Data Analyst",
+					"Web Developer",
+					"Machine Learning Enthusiast",
+					"DSA Learner",
+				],
+				typeSpeed: 50,
+				backSpeed: 30,
+				backDelay: 1000,
+				loop: true,
+			});
+		</script>
 	</body>
 </html>
